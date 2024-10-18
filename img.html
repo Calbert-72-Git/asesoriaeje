@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang=”es”>
+<head>
+    <meta charset=”UTF-8”>
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+    <title>Imagen Ampliada</title>
+    <link rel=”stylesheet” href=”styles.css”>
+</head>
+<body>
+    <div class=”container”>
+        <img src=”im” alt=”Miniatura” class=”thumbnail” onclick="mostrarImagen(this.src)">
+        <div id=”modal” class=”modal” onclick="cerrarModal()"">
+            <span class=”cerrar”>&times;</span>
+            <img class=”modal-contenido” id=”imagen-ampliada”>
+        </div>
+    </div>
+
+    <script src=”script.js”></script>
+</body>
+
+<script>
+
+JavaScript (script.js)
+
+Function mostrarImagen(src) {
+    Var modal = document.getElementById("modal");
+    Var imagenAmpliada = document.getElementById("imagen-ampliada");
+    Modal.style.display = "block";
+    imagenAmpliada.src = src;
+}
+
+Function cerrarModal() {
+    Var modal = document.getElementById("modal");
+    Modal.style.display = "none";
+}
+
+</script>
+
+
+</html>
+
+
+<!-- Style CSS -->
+<Style>
+Body {
+    Font-family: Arial, sans-serif;
+}
+
+.container {
+    Position: relative;
+}
+
+.thumbnail {
+    Width: 200px;
+    Cursor: pointer;
+}
+
+.modal {
+    Display: none;
+    Position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-contenido {
+    Margin: auto;
+    Display: block;
+    Width: 80%;
+    Max-width: 700px;
+}
+
+.cerrar {
+    Position: absolute;
+    Top: 15px;
+    Right: 35px;
+    Color: #fff;
+    Font-size: 40px;
+    Font-weight: bold;
+    Transition: 0.3s;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    Color: #bbb;
+    Text-decoration: none;
+    Cursor: pointer;
+}
+
+</Style>
+
+
+
+
